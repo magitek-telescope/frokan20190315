@@ -6,12 +6,36 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>splash-screen</title>
+    <style>
+html, body, #app, #splash, #splash-launched {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background: #323232;
+}
+#splash,
+#splash-launched {
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+    </style>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but splash-screen doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
+    <div id="app" v-cloak>
+      <div id="splash">
+        <div>
+          <img src="https://elevenback.jp/_nuxt/img/5e1feb8.svg">
+        </div>
+      </div>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>
